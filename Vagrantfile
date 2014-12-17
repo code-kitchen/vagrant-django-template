@@ -6,13 +6,6 @@ Vagrant::Config.run do |config|
 	config.vm.box = "debian/wheezy64"
 	config.vm.box_url = "https://codekitchen.io/files/vagrant/debian-wheezy-64.box"
 
-	# As an alternative to precise32, VMs can be built from the 'django-base' box as defined at
-	# https://github.com/torchbox/vagrant-django-base , which has more of the necessary server config
-	# baked in and thus takes less time to initialise. To go down this route, you will need to build
-	# and host django-base.box yourself, and substitute your own URL below.
-	#config.vm.box = "django-base-v2.2"
-	#config.vm.box_url = "http://vmimages.torchbox.com/django-base-v2.2.box"  # Torchbox-internal URL to django-base.box
-	
 	# Boot with a GUI so you can see the screen. (Default is headless)
 	# config.vm.boot_mode = :gui
 	
