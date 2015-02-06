@@ -72,7 +72,7 @@ grep -q -F "SECRET_KEY" $VIRTUALENV_DIR/bin/activate ||
         >> $VIRTUALENV_DIR/bin/activate
 
 grep -q -F "DJANGO_SETTINGS_MODULE" $VIRTUALENV_DIR/bin/activate ||
-    echo export DJANGO_SETTINGS_MODULE=$PROJECT_NAME.settings.local \
+    echo export DJANGO_SETTINGS_MODULE=$PROJECT_NAME.settings.dev \
         >> $VIRTUALENV_DIR/bin/activate
 
 grep -q -F "workon $VIRTUALENV_NAME" /home/vagrant/.bashrc || echo "workon $VIRTUALENV_NAME" >> /home/vagrant/.bashrc
