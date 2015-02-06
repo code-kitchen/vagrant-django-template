@@ -67,10 +67,6 @@ su - vagrant -c "/usr/local/bin/virtualenv $VIRTUALENV_DIR && \
     echo $PROJECT_DIR > $VIRTUALENV_DIR/.project && \
     PIP_DOWNLOAD_CACHE=/home/vagrant/.pip_download_cache $VIRTUALENV_DIR/bin/pip install -r $PROJECT_DIR/requirements.txt"
 
-grep -q -F "SECRET_KEY" $VIRTUALENV_DIR/bin/activate ||
-    echo export SECRET_KEY=\"`</dev/urandom tr -dc 'abcdefghijklmnopqrstuvwxyz0123456789\!@#$%^\&*\(-_=+\)' | head -c50; echo ""`\" \
-        >> $VIRTUALENV_DIR/bin/activate
-
 grep -q -F "DJANGO_SETTINGS_MODULE" $VIRTUALENV_DIR/bin/activate ||
     echo export DJANGO_SETTINGS_MODULE=$PROJECT_NAME.settings.dev \
         >> $VIRTUALENV_DIR/bin/activate
