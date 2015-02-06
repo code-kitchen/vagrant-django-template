@@ -45,7 +45,7 @@ wget https://www.postgresql.org/media/keys/ACCC4CF8.asc
 apt-key add ACCC4CF8.asc && rm ACCC4CF8.asc
 apt-get update
 apt-get install -y postgresql-$PGSQL_VERSION libpq-dev
-# cp $PROJECT_DIR/etc/install/pg_hba.conf /etc/postgresql/$PGSQL_VERSION/main/
+cp $PROJECT_DIR/etc/install/pg_hba.conf /etc/postgresql/$PGSQL_VERSION/main/
 service postgresql reload
 
 # virtualenv global setup
