@@ -60,7 +60,7 @@ su - vagrant -c "mkdir -p /home/vagrant/.pip_download_cache"
 # ---
 
 # postgresql setup for project
-createdb -U postgres "$DB_NAME"_dev
+createdb -U postgres "$DB_NAME"
 
 # virtualenv setup for project
 su - vagrant -c "/usr/local/bin/virtualenv $VIRTUALENV_DIR && \
