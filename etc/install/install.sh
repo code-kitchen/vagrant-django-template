@@ -77,4 +77,4 @@ grep -q -F "workon $VIRTUALENV_NAME" /home/vagrant/.bashrc || echo "workon $VIRT
 chmod a+x $PROJECT_DIR/manage.py
 
 # Django project setup
-su - vagrant -c "source $VIRTUALENV_DIR/bin/activate && cd $PROJECT_DIR && ./manage.py syncdb --noinput && ./manage.py migrate"
+su - vagrant -c "source $VIRTUALENV_DIR/bin/activate && cd $PROJECT_DIR && ./manage.py migrate --noinput"
